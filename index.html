@@ -2,7 +2,7 @@
 <html lang='en'>
     <head>
         
-        <meta charset='UTF=8'/>
+        <meta charset='utf-8'/>
         
         <title>Scotland</title>
         
@@ -19,7 +19,7 @@
                 max-width: 1000px;
                 margin: auto;
                 overflow: hidden;
-            }
+            }   
             
             h2{
                 font-family: 'Fjalla One', 'bold';
@@ -93,7 +93,7 @@
                 text-align: center;
                 padding: 10px;
                 margin: auto;
-                max-width: 968px;
+                max-width: 1000px;
                 width: 100%;
                 background-color: rgb(255,255,255);
                 top: 0px;
@@ -121,12 +121,95 @@
                 color: rgb(255,255,255);
                 background-color: rgb(0,0,0);
             }
+            .sticky-nav{
+                position: fixed;
+                width: 100%;
+                max-width: 988px;
+                top: 0;
+                align-content: center;
+                overflow: hidden;
+                z-index: 300;
+            }
             
-            img:hover{
-                opacity: 0.7;
-                border-radius: 5px;
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                position:relative;
+                max-width: 70%;
+                left: 15%;
+            }
+
+            .MySlides {
+                display: none;
+                text-align: center;
+            }
+
+            .cursor {
                 cursor: pointer;
-                transition: 0.3s;
+            }
+
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 45%;
+                width: auto;
+                padding: 15px;
+                color: rgb(255,255,255);
+                font-weight: bold;
+                font-size: 30px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .next { 
+                right: 0;
+            }
+            
+            .prev{ 
+                left: 0;
+            }
+            
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .numbertext {
+                color: #f2f2f2;
+                font-family: 'Cormorant', 'sans-serif';
+                font-size: 25px;
+                padding-left: 15px;
+                position: absolute;
+                top: 0;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .column {
+                float: left;
+                width: 25%;
+            }
+
+            .demo {
+                opacity: 0.6;
+            }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+            
+            iframe{
+                width: 100%;
+                height: 500px;
             }
 
         </style>
@@ -136,78 +219,168 @@
     <body>
         
         <div class="mainbox">
-            <img class="img-responsive" class="modal" src="Images/Edited/edinburgh1.jpg">
-            <div>
+        <div class="cover-id">
+            <img class="img-responsive" src="Images/edinburgh1.jpg" alt="A picture of Edinburgh Castle from the base of Castle Rock, with the words EDINBURGH at the bottom.">
+        </div>
+            
+            <div id="sticky">
                 <ul class="nav">
                     <li><a href="#findlater">Findlater Castle</a></li>
                     <li><a href="#aberdeenshire">Aberdeenshire</a></li>
                     <li><a href="#edinburgh">Edinburgh Castle</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#map">Map</a></li>
                 </ul>
-        </div>
+            </div>
             <div class="smallbox">
-            <h2 id="findlater">FINDLATER CASTLE</h2>
-                    <img class="img-responsive" src="Images/Edited/findlater1.jpg" alt="Findlater Castle's ruins">
-                    <h4>Findlater Castle is a small, ruined castle in Aberdeenshire, Scotland. It is at least eight hundred years old and is the historical seat of the Earls of Findlater and Seafield. It was abandoned in the 17th century and the ruins are now a scheduled monument, open for public exploration. </h4>
-                <div class="col">
-                    <img class="img-col" src="Images/Edited/entrances.jpg" alt="">
-                    <p>These holes in the top of the cliff are the only safe way to enter the ruins. The floors above have all fallen into the sea.</p>
-                </div>
-                <div class="col2">
-                    <img class="img-col" src="Images/Edited/holes.jpg">
-                    <p>There is only one surviving staircase, so you have to climb through the floor to access most of the rooms.</p>
-                </div>
-                    <img class="img-responsive" src="Images/Edited/findlater2.jpg">
-            <h2 id="aberdeenshire">ABERDEENSHIRE</h2>
-                    <img class="img-responsive" src="Images/Edited/sign.jpg">
-                    <h4>These pictures were all taken in Aberdeenshire, a historic county of northeastern Scotland, on the Moray Firth coast. Sandend is a fishing town that dates back to the 19th century - fishing is still Aberdeenshire's biggest industry. </h4>
-                <div class="col">
-                    <img class="img-col" src="Images/Edited/sandend.jpg">
-                    <p>This unnamed inlet is located next to Findlater Castle's ruins. </p>
-                </div>
-                <div class="col2">
-                    <img class="img-col" src="Images/Edited/bush.jpg">
-                    <p>This is the side of a large, solitary hill near Portsoy.</p>
-                </div>
-                    <img class="img-responsive" src="Images/Edited/stone%20circle.jpg">
-                    <h4>A makeshift stone circle has been constructed on this hilltop to mimic the ancient stone circles that are common throughout England.</h4>
-            <h2 id="edinburgh">EDINBURGH CASTLE</h2>
-                    <img class="img-responsive" src="Images/Edited/memorial.jpg">
-                    <h4>Edinburgh Castle is a historic fortress that has overlooked the city of Edinburgh for over a thousand years. Castle Rock has been inhabited since the Iron Age, and the castle itself dates back to the 12th century. As one of the most important strongholds in the Kingdom of Scotland, the castle is one of the most besieged places in history.</h4>
-                <div class="col">
-                    <img class="img-col" src="Images/Edited/edinburgh4.jpg">
-                    <p>The Scottish National War Memorial from the north, located in refurbished barracks on castle grounds</p>
-                </div>
-                <div class="col2">
-                    <img class="img-col" src="Images/Edited/edinburgh3.jpg">
-                    <p>A courtyard at the west end of the castle, facing the Royal Scots Regimental Museum</p>
-                </div>
-                    <img class="img-responsive" src="Images/Edited/edinburgh2.jpg">
-                    <h4>These 17th-century towers make up part of Foog's Gate, the gate to the castle's Upper Ward. The interior now contains a gift shop.</h4>
-            <h2 id="gallery">GALLERY</h2>
-                    <div class="col3">
-                        <img class="img-col" src="Images/Edited/seahole.jpg">
-                        <p>The ocean below Findlater Castle</p>
-                    </div>
-                    <div class="col4">
-                        <img class="img-col" src="Images/Edited/scott.jpg">
-                        <p>The Scott Monument at night</p>
-                    </div>
-                    <div class="col5">
-                        <img class="img-col" src="Images/Edited/pathway.jpg">
-                        <p>A walkway at Framlingham Castle</p>
-                    </div>
+                <h2 id="findlater">FINDLATER CASTLE</h2>
+                        <img class="img-responsive" src="Images/findlater1.jpg" alt="Findlater Castle's ruins">
+                        <h4>Findlater Castle is a small, ruined castle in Aberdeenshire, Scotland. It is at least eight hundred years old and is the historical seat of the Earls of Findlater and Seafield. It was abandoned in the 17th century and the ruins are now a scheduled monument, open for public exploration. </h4>
                     <div class="col">
-                        <img class="img-col" src="Images/Edited/arch.jpg">
-                        <p>An archway at Framlingham Castle</p>
+                        <img class="img-col" src="Images/entrances.jpg" alt="The remains of a stone hallway, sticking out of a grassy hillside">
+                        <p>These holes in the top of the cliff are the only safe way to enter the ruins. The floors above have all fallen into the sea.</p>
                     </div>
                     <div class="col2">
-                        <img class="img-col" src="Images/Edited/bridge.jpg" onclick="img.onlick()">
-                        <p>The remains of a bridge at Framlingham Castle</p>
+                        <img class="img-col" src="Images/holes.jpg" alt="A large hole in the floor of a stone room">
+                        <p>There is only one surviving staircase, so you have to climb through the floor to access most of the rooms.</p>
                     </div>
-            </div>
+                        <img class="img-responsive" src="Images/findlater2.jpg" alt="A view of Findlater castle">
+                <h2 id="aberdeenshire">ABERDEENSHIRE</h2>
+                        <img class="img-responsive" src="Images/sign.jpg" alt="A sign overlooking the ocean, with directions to Sandend and Sunnyside Beach">
+                        <h4>These pictures were all taken in Aberdeenshire, a historic county of northeastern Scotland, on the Moray Firth coast. Sandend is a fishing town that dates back to the 19th century - fishing is still Aberdeenshire's biggest industry. </h4>
+                    <div class="col">
+                        <img class="img-col" src="Images/sandend.jpg" alt="A small cove">
+                        <p>This unnamed inlet is located next to Findlater Castle's ruins. </p>
+                    </div>
+                    <div class="col2">
+                        <img class="img-col" src="Images/bush.jpg" alt="A mountainside">
+                        <p>This is the side of a large, solitary hill near Portsoy.</p>
+                    </div>
+                        <img class="img-responsive" src="Images/stone%20circle.jpg" alt="A stone circle on a mountaintop">
+                        <h4>A makeshift stone circle has been constructed on this hilltop to mimic the ancient stone circles that are common throughout England.</h4>
+                <h2 id="edinburgh">EDINBURGH CASTLE</h2>
+                        <img class="img-responsive" src="Images/memorial.jpg" alt="A castle building">
+                        <h4>Edinburgh Castle is a historic fortress that has overlooked the city of Edinburgh for over a thousand years. Castle Rock has been inhabited since the Iron Age, and the castle itself dates back to the 12th century. As one of the most important strongholds in the Kingdom of Scotland, the castle is one of the most besieged places in history.</h4>
+                    <div class="col">
+                        <img class="img-col" src="Images/edinburgh4.jpg" alt="Another castle building">
+                        <p>The Scottish National War Memorial from the north, located in refurbished barracks on castle grounds</p>
+                    </div>
+                    <div class="col2">
+                        <img class="img-col" src="Images/edinburgh3.jpg" alt="A third castle building">
+                        <p>A courtyard at the west end of the castle, facing the Royal Scots Regimental Museum</p>
+                    </div>
+                        <img class="img-responsive" src="Images/edinburgh2.jpg" alt="The fourth castle building">
+                        <h4>These 17th-century towers make up part of Foog's Gate, the gate to the castle's Upper Ward. The interior now contains a gift shop.</h4>
+                                
+                <h2 id="gallery">GALLERY</h2>
+                
+                <div class="container">
+                    
+                    <div class="MySlides">
+                        <div class="numbertext"> 1/4 </div>
+                        <img src="Images/seahole.jpg" style="width:60%" alt="A hole in a wall overlooking the sea">
+                        <p>The ocean below Findlater Castle</p>
+                    </div>
+                    
+                    <div class="MySlides">
+                        <div class="numbertext"> 2/4 </div>
+                        <img src="Images/scott.jpg" style="width:60%" alt="A large stone monument at night">
+                        <p>The Scott Monument at night</p>
+                    </div>
+                    
+                    <div class="MySlides">
+                        <div class="numbertext"> 3/4 </div>
+                        <img src="Images/hole.jpg" style="width:60%" alt="A window looking onto a cliff">
+                        <p>The remains of a window at Findlater Castle</p>
+                    </div>
+                    
+                    <div class="MySlides">
+                        <div class="numbertext"> 4/4 </div>
+                        <img src="Images/pathway.jpg" style="width:60%" alt="A wooden walkway">
+                        <p>A walkway at Framlingham Castle</p>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    </div>
+
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+                    
+                    <div class="row">
+                        <div style="width:42.5%; margin:auto; overflow: hidden; box-sizing: border-box;">
+                        <div class="column">
+                            <img class="demo cursor" src="Images/seahole.jpg" style="width:100%" onclick="currentSlide(1)" alt="A hole in a wall overlooking the sea">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="Images/scott.jpg" style="width:100%" onclick="currentSlide(2)" alt="A large stone monument at night">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="Images/hole.jpg" style="width:100%" onclick="currentSlide(3)" alt="A window looking onto a cliff">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="Images/pathway.jpg" style="width:100%" onclick="currentSlide(4)" alt="A wooden walkway">
+                        </div>
+                            </div>
+                
+                    </div>
+                    
+                    <h2 id="map">MAP</h2>
+                    
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1DeSZPGYC60tap1LJ3yLIrellrAnbxZSR" ></iframe> 
+                    
+                    <p>A map of some of the locations that were visited during this journey - Portsoy, Edinburgh, and Braemar.</p>
+            
         </div>
-        <script>
+        </div>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("MySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
         
-        </script>
+        var stick = document.getElementById("sticky");
+            console.log(stick);
+            window.addEventListener('scroll',scrollTracker);
+
+        function scrollTracker(e){
+            console.log(window.scrollY);
+            if(window.scrollY >= "510"){
+             stick.classList.add("sticky-nav");
+            }
+            else{
+                stick.classList.remove("sticky-nav");
+        }
+
+    }
+
+
+        </script>        
     </body>
