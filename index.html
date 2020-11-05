@@ -134,7 +134,7 @@
             * {
                 box-sizing: border-box;
             }
-
+/* -- slide show styles --*/
             .container {
                 position:relative;
                 max-width: 70%;
@@ -192,7 +192,7 @@
                 content: "";
                 display: table;
                 clear: both;
-                padding-bottom: 10%;
+                padding-bottom: 6%;
             }
 
             .column {
@@ -227,6 +227,12 @@
                 max-width: 1000px;
                 padding-left: 7%;
             }
+            
+            
+
+            span{
+                padding-top: 3.5em;
+            }
 
         </style>
         
@@ -235,10 +241,10 @@
     <body>
         
         <div class="mainbox">
-        <div class="cover-id">
+        <div class="cover-id" id="cover">
             <img class="img-responsive" src="Images/edinburgh1.jpg" alt="A picture of Edinburgh Castle from the base of Castle Rock, with the words EDINBURGH at the bottom.">
         </div>
-            
+   <!-- nav -->         
             <div id="sticky">
                 <ul class="nav">
                     <li><a href="#findlater">Findlater Castle</a></li>
@@ -249,7 +255,8 @@
                 </ul>
             </div>
             <div class="smallbox">
-                <h2 id="findlater">FINDLATER CASTLE</h2>
+                <span id="findlater"> &nbsp;</span>
+                <h2>FINDLATER CASTLE</h2>
                         <img class="img-responsive" src="Images/findlater1.jpg" alt="Findlater Castle's ruins">
                         <h4>Findlater Castle is a small, ruined castle in Aberdeenshire, Scotland. It is at least eight hundred years old and is the historical seat of the Earls of Findlater and Seafield. It was abandoned in the 17th century and the ruins are now a scheduled monument, open for public exploration. </h4>
                     <div class="col">
@@ -261,7 +268,8 @@
                         <p>There is only one surviving staircase, so you have to climb through the floor to access most of the rooms.</p>
                     </div>
                         <img class="img-responsive" src="Images/findlater2.jpg" alt="A view of Findlater castle">
-                <h2 id="aberdeenshire">ABERDEENSHIRE</h2>
+                <span id="aberdeenshire"> &nbsp;</span>
+                <h2>ABERDEENSHIRE</h2>
                         <img class="img-responsive" src="Images/sign.jpg" alt="A sign overlooking the ocean, with directions to Sandend and Sunnyside Beach">
                         <h4>These pictures were all taken in Aberdeenshire, a historic county of northeastern Scotland, on the Moray Firth coast. Sandend is a fishing town that dates back to the 19th century - fishing is still Aberdeenshire's biggest industry. </h4>
                     <div class="col">
@@ -274,7 +282,8 @@
                     </div>
                         <img class="img-responsive" src="Images/stone%20circle.jpg" alt="A stone circle on a mountaintop">
                         <h4>A makeshift stone circle has been constructed on this hilltop to mimic the ancient stone circles that are common throughout England.</h4>
-                <h2 id="edinburgh">EDINBURGH CASTLE</h2>
+                <span id="edinburgh"> &nbsp;</span>
+                <h2>EDINBURGH CASTLE</h2>
                         <img class="img-responsive" src="Images/memorial.jpg" alt="A castle building">
                         <h4>Edinburgh Castle is a historic fortress that has overlooked the city of Edinburgh for over a thousand years. Castle Rock has been inhabited since the Iron Age, and the castle itself dates back to the 12th century. As one of the most important strongholds in the Kingdom of Scotland, the castle is one of the most besieged places in history.</h4>
                     <div class="col">
@@ -288,13 +297,15 @@
                         <img class="img-responsive" src="Images/edinburgh2.jpg" alt="The fourth castle building">
                         <h4>These 17th-century towers make up part of Foog's Gate, the gate to the castle's Upper Ward. The interior now contains a gift shop.</h4>
                 
-                <h2 id="map">MAP</h2>
+                <span id="map"> &nbsp;</span>
+                <h2>MAP</h2>
                     
                     <iframe src="https://www.google.com/maps/d/embed?mid=1DeSZPGYC60tap1LJ3yLIrellrAnbxZSR" ></iframe> 
                     
                     <p>A map of some of the locations that were visited during this journey - Portsoy, Edinburgh, and Braemar.</p>
-                                
-                <h2 id="gallery">GALLERY</h2>
+                
+                <span id="gallery"> &nbsp;</span>             
+                <h2>GALLERY</h2>
                 
                 <div class="container">
                     
@@ -384,10 +395,15 @@
         var stick = document.getElementById("sticky");
             console.log(stick);
             window.addEventListener('scroll',scrollTracker);
+        var cover = document.getElementById("cover")
+        var cover_height = cover.offsetHeight
+    
 
         function scrollTracker(e){
-            console.log(window.scrollY);
-            if(window.scrollY >= "100"){
+            cover_height = cover.offsetHeight
+            
+            //console.log(window.scrollY);
+            if(window.scrollY >= cover_height){
              stick.classList.add("sticky-nav");
             }
             else{
